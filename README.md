@@ -29,7 +29,9 @@ or
 Documentation
 -------------
 
-### Configure Twilio in Kanboard
+### Configure Twilio API in Kanboard
+
+![Twilio Settings](https://cloud.githubusercontent.com/assets/323546/12133114/2a89e684-b3f0-11e5-8486-cbbf9edc7c4a.png)
 
 1. Go to **Settings > Integrations > SMS Two-Factor Authentication**
 2. Enter the Twilio API credentials (Account SID, Auth Token and Phone Number)
