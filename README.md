@@ -1,6 +1,8 @@
 SMS Two-Factor Authentication
 =============================
 
+[![Build Status](https://travis-ci.org/kanboard/plugin-sms-2fa.svg?branch=master)](https://travis-ci.org/kanboard/plugin-sms-2fa)
+
 Use text messages (SMS) instead of the default TOTP system (Time-based One-time Password Algorithm).
 This plugin works with the service [Twilio](https://www.twilio.com).
 
