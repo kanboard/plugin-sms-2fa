@@ -22,14 +22,6 @@ class SmsAuth extends Base implements PostAuthenticationProviderInterface
     private $code = '';
 
     /**
-     * Private key
-     *
-     * @access private
-     * @var string
-     */
-    private $secret = '';
-
-    /**
      * Get authentication provider name
      *
      * @access public
