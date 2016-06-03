@@ -15,9 +15,9 @@ class Plugin extends Base
         $this->container['smsManager'] = function ($container) {
             $sms = new SmsManager($container);
             $sms->setProvider(new TwilioSmsProvider(
-                $container['config']->get('twilio_account_sid'),
-                $container['config']->get('twilio_auth_token'),
-                $container['config']->get('twilio_from_number')
+                $container['configModel']->get('twilio_account_sid'),
+                $container['configModel']->get('twilio_auth_token'),
+                $container['configModel']->get('twilio_from_number')
             ));
 
             return $sms;
@@ -31,7 +31,7 @@ class Plugin extends Base
 
     public function onStartup()
     {
-        Translator::load($this->language->getCurrentLanguage(), __DIR__.'/Locale');
+        Translator::load($this->languageModel->getCurrentLanguage(), __DIR__.'/Locale');
     }
 
     public function getPluginName()
@@ -51,7 +51,7 @@ class Plugin extends Base
 
     public function getPluginVersion()
     {
-        return '1.0.1';
+        return '1.0.2';
     }
 
     public function getPluginHomepage()

@@ -56,7 +56,7 @@ class SmsAuth extends Base implements PostAuthenticationProviderInterface
     public function beforeCode()
     {
         $this->sessionStorage->smsTwoFactorSecret = random_int(100000, 999999);
-        $to = $this->userMetadata->get($this->userSession->getId(), 'phone_number');
+        $to = $this->userMetadataModel->get($this->userSession->getId(), 'phone_number');
         $this->container['smsManager']->send($to, $this->sessionStorage->smsTwoFactorSecret);
     }
 
