@@ -104,18 +104,6 @@ class SmsAuth extends Base implements PostAuthenticationProviderInterface
     }
 
     /**
-     * Get QR code url
-     *
-     * @access public
-     * @param  string $label
-     * @return string
-     */
-    public function getQrCodeUrl($label)
-    {
-        return '';
-    }
-
-    /**
      * Get key url (empty if no url can be provided)
      *
      * @access public

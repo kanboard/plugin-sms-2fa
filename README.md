@@ -15,7 +15,7 @@ Author
 Requirements
 ------------
 
-- Kanboard >= 1.0.37
+- Kanboard >= 1.0.41
 - [Twilio Account](https://www.twilio.com)
 - Twilio phone number and API credentials
 
