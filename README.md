@@ -9,13 +9,14 @@ This plugin works with the service [Twilio](https://www.twilio.com).
 Author
 ------
 
-- Frederic Guillot
+- Frédéric Guillot
 - License MIT
 
 Requirements
 ------------
 
-- Kanboard >= 1.0.41
+- PHP >= 5.6
+- Kanboard >= 1.2.0
 - [Twilio Account](https://www.twilio.com)
 - Twilio phone number and API credentials
 

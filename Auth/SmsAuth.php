@@ -40,8 +40,8 @@ class SmsAuth extends Base implements PostAuthenticationProviderInterface
      */
     public function authenticate()
     {
-        if ($this->sessionStorage->smsTwoFactorSecret === (int) $this->code) {
-            unset($this->sessionStorage->smsTwoFactorSecret);
+        if (session_exists('smsTwoFactorSecret') && session_get('smsTwoFactorSecret') == $this->code) {
+            session_remove('smsTwoFactorSecret');
             return true;
         }
 
@@ -55,9 +55,10 @@ class SmsAuth extends Base implements PostAuthenticationProviderInterface
      */
     public function beforeCode()
     {
-        $this->sessionStorage->smsTwoFactorSecret = random_int(100000, 999999);
+        $secret = random_int(100000, 999999);
+        session_set('smsTwoFactorSecret', $secret);
         $to = $this->userMetadataModel->get($this->userSession->getId(), 'phone_number');
-        $this->container['smsManager']->send($to, $this->sessionStorage->smsTwoFactorSecret);
+        $this->container['smsManager']->send($to, $secret);
     }
 
     /**

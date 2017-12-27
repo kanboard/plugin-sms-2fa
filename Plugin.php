@@ -41,7 +41,7 @@ class Plugin extends Base
 
     public function getPluginDescription()
     {
-        return t('SMS text messages for two-factor authentication');
+        return t('Use SMS messages for two-factor authentication');
     }
 
     public function getPluginAuthor()
@@ -51,7 +51,7 @@ class Plugin extends Base
 
     public function getPluginVersion()
     {
-        return '1.0.4';
+        return '1.0.5';
     }
 
     public function getPluginHomepage()
@@ -61,6 +61,6 @@ class Plugin extends Base
 
     public function getCompatibleVersion()
     {
-        return '>=1.0.41';
+        return '>=1.2.0';
     }
 }
